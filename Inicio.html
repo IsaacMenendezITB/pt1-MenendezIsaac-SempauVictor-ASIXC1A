@@ -27,13 +27,11 @@
                         </div>
                     </article>
                     <article class="grid">
-                        <div class="reloj">
-                            <h1>Generador de nombres aleatorios</h1>
-                            <button id="boton-cargar">Cargar nombres desde archivo</button>
-                            <button id="boton-generar" disabled>Generar nombre aleatorio</button>
-                            <p id="nombre-aleatorio"></p>
-                            <script src="ruleta.js"></script>
-                        </div>
+                        <div id="clock"></div>
+                        <label for="timer">Temporizador (minutos):</label>
+                        <input type="number" id="timer" min="1" max="60" value="10">
+                        <button id="start-timer" onclick="startTimer()">Iniciar temporizador</button>
+                        <script src="clock.js"></script>
                     </article>
                 </section>
             </main>

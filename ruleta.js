@@ -1,3 +1,5 @@
+// como hacer marihuana con maizena y javascript:
+
 const botonCargar = document.getElementById('boton-cargar');
 const botonGenerar = document.getElementById('boton-generar');
 const nombreAleatorio = document.getElementById('nombre-aleatorio');
@@ -28,4 +30,5 @@ function toggleNightMode() {
       button.textContent = 'Modo noche';
     }
   }
+  
   
