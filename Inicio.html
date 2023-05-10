@@ -1,40 +1,48 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <meta charset="utf-8"/>
-    </head>
-    <body>
-        <div class="contenedor">
-            <header>
-                <!--<div class="logo">
-                    <img src="imgs/Logo-Delicias.png" alt="image"></img>
-                </div>-->
-                <div class="head">
-                    <button id="night-mode-button" onclick="toggleNightMode()">Modo noche</button>
-                </div>
-
-            </header>
-            <main>
-                <section>
-                    <article class="grid">
-                        <div class="ruleta">
-                            <h1>Generador de nombres aleatorios</h1>
-                            <button id="boton-cargar">Cargar nombres desde archivo</button>
-                            <button id="boton-generar" disabled>Generar nombre aleatorio</button>
-                            <p id="nombre-aleatorio"></p>
-                            <script src="ruleta.js"></script>
-                        </div>
-                    </article>
-                    <article class="grid">
-                        <div id="clock"></div>
-                        <label for="timer">Temporizador (minutos):</label>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="head">
+                <button id="night-mode-button" onclick="toggleNightMode()">Modo noche</button>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="grid">                    
+                    <article class="grid-izquierda">
+                        <h1 for="timer">Temporizador (minutos):</h1>
                         <input type="number" id="timer" min="1" max="60" value="10">
                         <button id="start-timer" onclick="startTimer()">Iniciar temporizador</button>
+                        <script src="timer.js"></script>
+                        <img id="bomba" src="bomba.gif" style="display:none"></img>
+                        <audio id="nuclear" src="Nuclear.mp3"></audio>
+                    </article>
+                    <article class="grid-izquierda">
+                        <h1 for="timer">Hora actual:</h1>
+                        <div id="clock"></div>
                         <script src="clock.js"></script>
                     </article>
-                </section>
-            </main>
-        </div>
-    </body>
+                </div>
+                <div class="grid">
+                    <div class="ruleta">
+                        <h1>Generador de nombres aleatorios</h1>
+                        <button id="boton-cargar">Cargar nombres desde archivo</button>
+                        <button id="boton-generar" disabled>Generar nombre aleatorio</button>
+                        <img id="flechita" src="flechita.png" style="display:none"></img>
+                        <img id="ruleta" src="ruleta.png" style="display:none"></img>  
+                        <audio id="ding" src="ding-ding.mp3"></audio>                          
+                        <p id="nombre-aleatorio"></p>
+                        <script src="ruleta.js"></script>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
